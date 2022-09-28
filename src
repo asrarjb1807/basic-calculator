@@ -1,0 +1,51 @@
+from art import logo
+from replit import clear
+
+def add(num1, num2) :
+	return num1 + num2
+	
+def	sub(num1, num2) :
+	return num1 - num2
+
+def	multi(num1, num2) :
+	return num1 * num2
+	
+def	divide(num1, num2) :
+	return num1 / num2
+
+num1 = float(input("Enter your first number : "))
+select = input("+\n-\n*\n/\nPick your operator : ")
+num2 = float(input("Enter your next number : "))
+
+while True :
+	
+	if select == "+" :
+		total =	add(num1, num2)
+		print(f">> {num1} + {num2} = {total}")
+	elif select == "-" :
+		total =	sub(num1, num2)
+		print(f">> {num1} - {num2} = {total}")
+	elif select == "*" :
+		total =	multi(num1, num2)
+		print(f">> {num1} * {num2} = {total}")
+	elif select == "/" :
+		total =	divide(num1, num2)	
+		print(f">> {num1} - {num2} = {total}")
+		
+	ask = input(f'''Type 'y' to continue calculating with {total},
+or type 'n' to start a new calculation: ''')
+	if ask == "n" :
+		clear()
+		num1 = float(input("Enter your first number : "))
+		select = input("+\n-\n*\n/\nPick your operator : ")
+		num2 = float(input("Enter your next number : "))
+		
+	else :
+		num1 = total
+		select = input("+\n-\n*\n/\nPick your operator : ")
+		num2 = float(input("Enter your next number : "))
+		
+
+
+	
+	
